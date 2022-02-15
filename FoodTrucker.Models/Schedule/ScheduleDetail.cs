@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FoodTrucker.Models.Customer
 {
-    internal class ScheduleDetail
+    public class ScheduleDetail
     {
+        public int Id { get; set; }
+        public DateTimeOffset Date { get; set; }
+        public int LocationId { get; set; }
     }
 }

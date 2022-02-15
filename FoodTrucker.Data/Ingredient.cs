@@ -28,6 +28,5 @@ namespace FoodTrucker.Data
         public double QuantityInStock { get; set; }
         [Required]
         public IngredientType IngredientType { get; set; }
-
     }
 }

@@ -17,6 +17,10 @@ namespace FoodTrucker.Data
         [Required]
         [MaxLength(25)]
         public string LastName { get; set; }
+        public string FullName
+        {
+            get { return FirstName + " " + LastName; }
+        }
         public DateTimeOffset HireDate { get; set; }
         public bool IsCurrentlyEmployeed { get; set; }
     }

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,10 +63,10 @@
     <Compile Include="MenuItem\MenuItemEdit.cs" />
     <Compile Include="MenuItem\MenuItemListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecipeIngredient\RecipeCreate.cs" />
-    <Compile Include="RecipeIngredient\RecipeDetail.cs" />
-    <Compile Include="RecipeIngredient\RecipeEdit.cs" />
-    <Compile Include="RecipeIngredient\RecipeListItem.cs" />
+    <Compile Include="RecipeIngredient\RecipeIngredientCreate.cs" />
+    <Compile Include="RecipeIngredient\RecipeIngredientDetail.cs" />
+    <Compile Include="RecipeIngredient\RecipeIngredientEdit.cs" />
+    <Compile Include="RecipeIngredient\RecipeIngredientListItem.cs" />
     <Compile Include="Recipe\RecipeCreate.cs" />
     <Compile Include="Recipe\RecipeDetail.cs" />
     <Compile Include="Recipe\RecipeEdit.cs" />
@@ -79,6 +80,11 @@
     <Compile Include="Transaction\TransactionEdit.cs" />
     <Compile Include="Transaction\TransactionListItem.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FoodTrucker.Data\FoodTrucker.Data.csproj">
+      <Project>{13fa6bef-e74a-49f4-8495-ff7193cd03ca}</Project>
+      <Name>FoodTrucker.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

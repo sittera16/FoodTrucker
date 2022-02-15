@@ -8,5 +8,7 @@ namespace FoodTrucker.Models.Customer
 {
     public class CustomerListItem
     {
+        public int Id { get; set; }
+        public string FullName { get; set; }
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FoodTrucker.Models.Customer
 {
-    internal class RecipeDetail
+    public class RecipeDetail
     {
+        public int Id { get; set; }
+        public string Instructions { get; set; }
+        public int RecipeIngredientId { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FoodTrucker.Services
 {
-    internal class RecipeIngredientService
+    public class RecipeIngredientService
     {
     }
 }

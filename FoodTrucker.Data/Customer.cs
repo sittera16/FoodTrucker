@@ -21,5 +21,8 @@ namespace FoodTrucker.Data
         {
             get { return FirstName + " " + LastName; }
         }
+        [MaxLength(100)]
+        public string EmailAddress { get; set; }
+        public DateTimeOffset BirthDate { get; set; }
     }
 }
