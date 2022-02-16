@@ -10,6 +10,7 @@ namespace FoodTrucker.Models.Customer
 {
     public class LocationEdit
     {
+        public int Id { get; set; }
         [Required]
         public string Address { get; set; }
         [Required]

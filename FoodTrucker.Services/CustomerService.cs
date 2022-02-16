@@ -17,7 +17,7 @@ namespace FoodTrucker.Services
             _userId = userId;
         }
 
-        public bool CreateNote(CustomerCreate model)
+        public bool CreateCustomer(CustomerCreate model)
         {
             var entity =
                 new Customer()
@@ -54,7 +54,7 @@ namespace FoodTrucker.Services
             }
         }
 
-        public CustomerDetail GetNoteById(int id)
+        public CustomerDetail GetCustomerById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -94,7 +94,7 @@ namespace FoodTrucker.Services
             }
         }
 
-        public bool DeleteNote(int customerId)
+        public bool DeleteCustomer(int customerId)
         {
             using (var ctx = new ApplicationDbContext())
             {
