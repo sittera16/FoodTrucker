@@ -175,7 +175,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -252,6 +251,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FoodTrucker.Data\FoodTrucker.Data.csproj">
+      <Project>{13fa6bef-e74a-49f4-8495-ff7193cd03ca}</Project>
+      <Name>FoodTrucker.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodTrucker.Models\FoodTrucker.Models.csproj">
+      <Project>{dd61618b-aa8b-4983-bd23-b4a0aa2a7a9c}</Project>
+      <Name>FoodTrucker.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FoodTrucker.Services\FoodTrucker.Services.csproj">
+      <Project>{fb94ae54-9622-4b4f-9517-ac84069b52fa}</Project>
+      <Name>FoodTrucker.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
