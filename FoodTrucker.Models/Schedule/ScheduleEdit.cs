@@ -9,6 +9,7 @@ namespace FoodTrucker.Models.Customer
 {
     public class ScheduleEdit
     {
+        public int Id { get; set; }
         [Required]
         public DateTimeOffset Date { get; set; }
         [Required]

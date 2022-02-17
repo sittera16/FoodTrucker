@@ -38,9 +38,9 @@ namespace FoodTrucker.Data
         public DbSet<Location> Locations { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
-        public DbSet<RecipeIngredient> RecipeIngredient { get; set; }
-        public DbSet<Schedule> Schedule { get; set; }
-        public DbSet<Transaction> Transaction { get; set; }
+        public DbSet<RecipeIngredient> RecipeIngredients { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

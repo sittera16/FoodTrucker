@@ -8,6 +8,7 @@ namespace FoodTrucker.Models.Customer
 {
     public class TransactionEdit
     {
+        public int Id { get; set; }
         public int CustomerId { get; set; }
         public int MenuId { get; set; }
         public decimal TotalPrice { get; set; }
