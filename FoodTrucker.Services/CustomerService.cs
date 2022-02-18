@@ -47,7 +47,8 @@ namespace FoodTrucker.Services
                                 new CustomerListItem
                                 {
                                     Id = c.Id,
-                                    FullName = c.FullName,
+                                    LastName = c.LastName,
+                                    FirstName = c.FirstName,
                                 }
                                 );
                 return query.ToArray();

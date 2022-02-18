@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using FoodTrucker.WebMVC.Models;
+using FoodTrucker.Data;
 
 namespace FoodTrucker.WebMVC
 {

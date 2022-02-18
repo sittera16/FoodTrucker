@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FoodTrucker.WebMVC.Models;
+using FoodTrucker.Data;
 
 namespace FoodTrucker.WebMVC.Controllers
 {
