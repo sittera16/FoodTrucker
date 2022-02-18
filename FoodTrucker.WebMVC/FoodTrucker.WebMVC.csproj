@@ -254,10 +254,15 @@
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Ingredient\Index.cshtml" />
+    <Content Include="Views\Ingredient\Create.cshtml" />
+    <Content Include="Views\Ingredient\Details.cshtml" />
+    <Content Include="Views\Ingredient\Edit.cshtml" />
+    <Content Include="Views\Ingredient\Delete.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Ingredient\" />
     <Folder Include="Views\Location\" />
     <Folder Include="Views\MenuItem\" />
     <Folder Include="Views\RecipeIngredient\" />

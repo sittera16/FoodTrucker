@@ -9,12 +9,12 @@ namespace FoodTrucker.Data
 {
     public enum IngredientType
     {
-        bread,
-        protein,
-        topping,
-        condiment,
-        seasoning,
-        side
+        Bread,
+        Protein,
+        Topping,
+        Condiment,
+        Seasoning,
+        Side
     }
     public class Ingredient
     {

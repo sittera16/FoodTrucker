@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "EditorTemplates";
+}
+
+<h2>EditorTemplates</h2>
+
+@model Enum
+@{
+    var optionLabel = ViewData["optionLabel"] as string;
+    var htmlAttributes = ViewData["htmlAttributes"];
+}
+@Html.EnumDropDownListFor(m => m, optionLabel, htmlAttributes)
