@@ -47,7 +47,8 @@ namespace FoodTrucker.Services
                                 new EmployeeListItem
                                 {
                                     Id = c.Id,
-                                    FullName = c.FullName,
+                                    LastName = c.LastName,
+                                    FirstName = c.FirstName,
                                 }
                                 );
                 return query.ToArray();

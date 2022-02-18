@@ -13,14 +13,10 @@ namespace FoodTrucker.Data
         public int Id { get; set; }
         [Required]
         [MaxLength(25)]
-        public string FirstName { get; set; }
+        public string LastName { get; set; }
         [Required]
         [MaxLength(25)]
-        public string LastName { get; set; }
-        public string FullName
-        {
-            get { return FirstName + " " + LastName; }
-        }
+        public string FirstName { get; set; }
         public DateTimeOffset HireDate { get; set; }
         public bool IsCurrentlyEmployeed { get; set; }
     }
