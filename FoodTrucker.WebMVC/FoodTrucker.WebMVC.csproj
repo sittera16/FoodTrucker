@@ -260,10 +260,14 @@
     <Content Include="Views\Ingredient\Edit.cshtml" />
     <Content Include="Views\Ingredient\Delete.cshtml" />
     <Content Include="Views\Shared\EditorTemplates.cshtml" />
+    <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Location\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Location\" />
     <Folder Include="Views\MenuItem\" />
     <Folder Include="Views\RecipeIngredient\" />
     <Folder Include="Views\Recipe\" />
