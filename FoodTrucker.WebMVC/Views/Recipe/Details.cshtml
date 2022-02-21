@@ -1,0 +1,34 @@
+﻿@model FoodTrucker.Models.Customer.RecipeDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RecipeDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecipeIngredientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecipeIngredientId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

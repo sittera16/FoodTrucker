@@ -270,11 +270,15 @@
     <Content Include="Views\MenuItem\Details.cshtml" />
     <Content Include="Views\MenuItem\Edit.cshtml" />
     <Content Include="Views\MenuItem\Delete.cshtml" />
+    <Content Include="Views\Recipe\Index.cshtml" />
+    <Content Include="Views\Recipe\Create.cshtml" />
+    <Content Include="Views\Recipe\Details.cshtml" />
+    <Content Include="Views\Recipe\Edit.cshtml" />
+    <Content Include="Views\Recipe\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\RecipeIngredient\" />
-    <Folder Include="Views\Recipe\" />
     <Folder Include="Views\Schedule\" />
     <Folder Include="Views\Transaction\" />
   </ItemGroup>
