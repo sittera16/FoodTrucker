@@ -13,6 +13,12 @@ namespace FoodTrucker.WebMVC.Controllers
             return View();
         }
 
+        public ActionResult Indexes()
+        {
+            ViewBag.Message = "List of all the tables of this application:";
+
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
