@@ -280,10 +280,14 @@
     <Content Include="Views\RecipeIngredient\Details.cshtml" />
     <Content Include="Views\RecipeIngredient\Edit.cshtml" />
     <Content Include="Views\RecipeIngredient\Delete.cshtml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\Schedule\Create.cshtml" />
+    <Content Include="Views\Schedule\Details.cshtml" />
+    <Content Include="Views\Schedule\Edit.cshtml" />
+    <Content Include="Views\Schedule\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Schedule\" />
     <Folder Include="Views\Transaction\" />
   </ItemGroup>
   <ItemGroup>
