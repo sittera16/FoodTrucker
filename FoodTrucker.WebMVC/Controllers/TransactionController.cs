@@ -63,7 +63,7 @@ namespace FoodTrucker.WebMVC.Controllers
                 {
                     Id = detail.Id,
                     CustomerId = detail.CustomerId,
-                    MenuId = detail.MenuId,
+                    MenuItemId = detail.MenuItemId,
                     TotalPrice = detail.TotalPrice,
                     LocationId = detail.LocationId,
                     EmployeeId = detail.EmployeeId,

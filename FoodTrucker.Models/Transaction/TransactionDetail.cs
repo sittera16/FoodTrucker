@@ -10,7 +10,7 @@ namespace FoodTrucker.Models.Customer
     {
         public int Id { get; set; }
         public int CustomerId { get; set; }
-        public int MenuId { get; set; }
+        public int MenuItemId { get; set; }
         public decimal TotalPrice { get; set; }
         public int LocationId { get; set; }
         public int EmployeeId { get; set; }

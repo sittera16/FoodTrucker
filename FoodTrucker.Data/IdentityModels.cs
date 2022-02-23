@@ -54,6 +54,7 @@ namespace FoodTrucker.Data
                 .Add(new IdentityUserRoleConfirmation());
 
         }
+
     }
 
     public class IdentityUserLoginConfirmation : EntityTypeConfiguration<IdentityUserLogin>

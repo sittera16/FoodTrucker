@@ -23,7 +23,6 @@ namespace FoodTrucker.Services
                 new Recipe()
                 {
                     Instructions = model.Instructions,
-                    RecipeIngredientId = model.RecipeIngredientId,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -45,7 +44,7 @@ namespace FoodTrucker.Services
                                 new RecipeListItem
                                 {
                                     Id = c.Id,
-                                    RecipeIngredientId = c.RecipeIngredientId,
+                                    Ingredients = c.RecipeIngredients.Select(r => r.Ingredient.Name ).ToList(),
                                 }
                                 );
                 return query.ToArray();
@@ -65,7 +64,12 @@ namespace FoodTrucker.Services
                     {
                         Id = entity.Id,
                         Instructions = entity.Instructions,
-                        RecipeIngredientId = entity.RecipeIngredientId
+                        RecipeIngredients = entity.RecipeIngredients.Select(r => new RecipeIngredientListItem
+                        {
+                            Id = r.Id,
+                            RecipeId = r.RecipeId,
+                            IngredientId = r.IngredientId,
+                        }).ToList(),
                     };
             }
         }
@@ -82,7 +86,6 @@ namespace FoodTrucker.Services
 
                 entity.Id = model.Id;
                 entity.Instructions = model.Instructions;
-                entity.RecipeIngredientId = model.RecipeIngredientId;
 
                 return ctx.SaveChanges() == 1;
             }

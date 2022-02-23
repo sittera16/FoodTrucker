@@ -23,7 +23,7 @@ namespace FoodTrucker.Services
                 new Transaction()
                 {
                     CustomerId = model.CustomerId,
-                    MenuId = model.MenuId,
+                    MenuItemId = model.MenuItemId,
                     TotalPrice = model.TotalPrice,
                     LocationId = model.LocationId,
                     EmployeeId = model.EmployeeId,
@@ -68,7 +68,7 @@ namespace FoodTrucker.Services
                     {
                         Id = entity.Id,
                         CustomerId = entity.CustomerId,
-                        MenuId = entity.MenuId,
+                        MenuItemId = entity.MenuItemId,
                         TotalPrice = entity.TotalPrice,
                         LocationId = entity.LocationId,
                         EmployeeId = entity.EmployeeId,
@@ -88,7 +88,7 @@ namespace FoodTrucker.Services
 
                 entity.Id = model.Id;
                 entity.CustomerId = model.CustomerId;
-                entity.MenuId = model.MenuId;
+                entity.MenuItemId = model.MenuItemId;
                 entity.TotalPrice = model.TotalPrice;
                 entity.LocationId = model.LocationId;
                 entity.EmployeeId = model.EmployeeId;

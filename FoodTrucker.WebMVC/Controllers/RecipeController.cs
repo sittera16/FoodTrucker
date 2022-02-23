@@ -63,7 +63,6 @@ namespace FoodTrucker.WebMVC.Controllers
                 {
                     Id = detail.Id,
                     Instructions = detail.Instructions,
-                    RecipeIngredientId = detail.RecipeIngredientId,
                 };
             return View(model);
         }
