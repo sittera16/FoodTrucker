@@ -46,7 +46,8 @@ namespace FoodTrucker.Services
                                 new IngredientListItem
                                 {
                                     Id = c.Id,
-                                    Name = c.Name
+                                    Name = c.Name,
+                                    QuantityInStock = c.QuantityInStock,
                                 }
                                 );
                 return query.ToArray();

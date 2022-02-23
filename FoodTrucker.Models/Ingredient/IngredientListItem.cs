@@ -11,6 +11,6 @@ namespace FoodTrucker.Models.Customer
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double QuantityInStock { get; set; }
+        public int QuantityInStock { get; set; }
     }
 }

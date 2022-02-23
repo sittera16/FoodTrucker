@@ -25,7 +25,7 @@ namespace FoodTrucker.Data
         public string Name { get; set; }
         [Required]
         [Range(0,150)]
-        public double QuantityInStock { get; set; }
+        public int QuantityInStock { get; set; }
         [Required]
         public IngredientType IngredientType { get; set; }
     }
