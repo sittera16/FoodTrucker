@@ -26,11 +26,14 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RecipeIngredients)
+            @Html.DisplayNameFor(model => model.Ingredients)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.RecipeIngredients)
+            @foreach (var ingredient in Model.Ingredients)
+            {
+                <p>@ingredient,</p>
+            }
         </dd>
 
     </dl>

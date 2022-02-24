@@ -66,12 +66,7 @@ namespace FoodTrucker.Services
                         Id = entity.Id,
                         Name=entity.Name,
                         Instructions = entity.Instructions,
-                        RecipeIngredients = entity.RecipeIngredients.Select(r => new RecipeIngredientListItem
-                        {
-                            Id = r.Id,
-                            RecipeId = r.RecipeId,
-                            IngredientId = r.IngredientId,
-                        }).ToList(),
+                        Ingredients = entity.RecipeIngredients.Select(r => r.Ingredient.Name).ToList(),
                     };
             }
         }
