@@ -46,7 +46,8 @@ namespace FoodTrucker.Services
                                 new MenuItemListItem
                                 {
                                     Id = c.Id,
-                                    Description = c.Description
+                                    Name = c.Recipe.Name,
+                                    Price = c.Price
                                 }
                                 );
                 return query.ToArray();
@@ -65,7 +66,7 @@ namespace FoodTrucker.Services
                     new MenuItemDetail
                     {
                         Id = entity.Id,
-                        RecipeId = entity.RecipeId,
+                        Name = entity.Recipe.Name,
                         Price = entity.Price,
                         Description = entity.Description
                     };
