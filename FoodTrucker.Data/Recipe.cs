@@ -13,6 +13,8 @@ namespace FoodTrucker.Data
         [Key]
         public int Id { get; set; }
         [Required]
+        public string Name { get; set; }
+        [Required]
         public string Instructions { get; set; }
 
         public virtual List<RecipeIngredient> RecipeIngredients { get; set; }

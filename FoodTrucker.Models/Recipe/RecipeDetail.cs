@@ -9,6 +9,7 @@ namespace FoodTrucker.Models.Customer
     public class RecipeDetail
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public string Instructions { get; set; }
         public List<RecipeIngredientListItem> RecipeIngredients { get; set; }
     }

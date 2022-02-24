@@ -62,6 +62,7 @@ namespace FoodTrucker.WebMVC.Controllers
                 new RecipeEdit
                 {
                     Id = detail.Id,
+                    Name = detail.Name,
                     Instructions = detail.Instructions,
                 };
             return View(model);

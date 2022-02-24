@@ -44,6 +44,7 @@ namespace FoodTrucker.Services
                                 new RecipeListItem
                                 {
                                     Id = c.Id,
+                                    Name = c.Name,
                                     Ingredients = c.RecipeIngredients.Select(r => r.Ingredient.Name ).ToList(),
                                 }
                                 );
@@ -63,6 +64,7 @@ namespace FoodTrucker.Services
                     new RecipeDetail
                     {
                         Id = entity.Id,
+                        Name=entity.Name,
                         Instructions = entity.Instructions,
                         RecipeIngredients = entity.RecipeIngredients.Select(r => new RecipeIngredientListItem
                         {
@@ -85,9 +87,10 @@ namespace FoodTrucker.Services
                         .Single(e => e.Id == model.Id);
 
                 entity.Id = model.Id;
+                entity.Name = model.Name;
                 entity.Instructions = model.Instructions;
 
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() >0;
             }
         }
 
