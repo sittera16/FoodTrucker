@@ -22,8 +22,9 @@ namespace FoodTrucker.Services
             var entity =
                 new Transaction()
                 {
+                    TransactionDate = model.TransactionDate,
                     CustomerId = model.CustomerId,
-                    MenuItemId = model.MenuItemId,
+                    TransactionMenuItemId = model.TransactionMenuItemId,
                     TotalPrice = model.TotalPrice,
                     LocationId = model.LocationId,
                     EmployeeId = model.EmployeeId,
@@ -48,6 +49,7 @@ namespace FoodTrucker.Services
                                 new TransactionListItem
                                 {
                                     Id = c.Id,
+                                    TransactionDate = c.TransactionDate,
                                     TotalPrice = c.TotalPrice,
                                 }
                                 );
@@ -67,8 +69,9 @@ namespace FoodTrucker.Services
                     new TransactionDetail
                     {
                         Id = entity.Id,
+                        TransactionDate = entity.TransactionDate,
                         CustomerId = entity.CustomerId,
-                        MenuItemId = entity.MenuItemId,
+                        MenuItems = entity.TransactionMenuItems.Select(t => t.MenuItem.Name).ToList(),
                         TotalPrice = entity.TotalPrice,
                         LocationId = entity.LocationId,
                         EmployeeId = entity.EmployeeId,
@@ -87,8 +90,8 @@ namespace FoodTrucker.Services
                         .Single(e => e.Id == model.Id);
 
                 entity.Id = model.Id;
+                entity.TransactionDate = model.TransactionDate;
                 entity.CustomerId = model.CustomerId;
-                entity.MenuItemId = model.MenuItemId;
                 entity.TotalPrice = model.TotalPrice;
                 entity.LocationId = model.LocationId;
                 entity.EmployeeId = model.EmployeeId;

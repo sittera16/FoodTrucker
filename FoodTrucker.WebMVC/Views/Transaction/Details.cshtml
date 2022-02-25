@@ -19,11 +19,22 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MenuItemId)
+            @Html.DisplayNameFor(model => model.TransactionDate)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MenuItemId)
+            @Html.DisplayFor(model => model.TransactionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItems)
+        </dt>
+
+        <dd>
+            @foreach (var menuItem in Model.MenuItems)
+            {
+                <p>@menuItem,</p>
+            }
         </dd>
 
         <dt>

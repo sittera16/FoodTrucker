@@ -11,6 +11,7 @@ namespace FoodTrucker.Data
     {
         [Key]
         public int Id { get; set; }
+        public string Name { get; set; }
         public int RecipeId { get; set; }
         [Required]
         public decimal Price { get; set; }

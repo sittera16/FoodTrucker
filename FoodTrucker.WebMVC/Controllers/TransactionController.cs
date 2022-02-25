@@ -62,8 +62,8 @@ namespace FoodTrucker.WebMVC.Controllers
                 new TransactionEdit
                 {
                     Id = detail.Id,
+                    TransactionDate = detail.TransactionDate,
                     CustomerId = detail.CustomerId,
-                    MenuItemId = detail.MenuItemId,
                     TotalPrice = detail.TotalPrice,
                     LocationId = detail.LocationId,
                     EmployeeId = detail.EmployeeId,

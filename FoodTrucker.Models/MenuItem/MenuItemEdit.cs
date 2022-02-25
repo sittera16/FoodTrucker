@@ -10,11 +10,9 @@ namespace FoodTrucker.Models.Customer
     public class MenuItemEdit
     {
         public int Id { get; set; }
-        [Required]
+        public string Name { get; set; }
         public int RecipeId { get; set; }
-        [Required]
         public decimal Price { get; set; }
-        [Required]
         public string Description { get; set; }
     }
 }

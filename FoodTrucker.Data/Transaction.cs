@@ -11,14 +11,15 @@ namespace FoodTrucker.Data
     {
         [Key]
         public int Id { get; set; }
+        public DateTime TransactionDate { get; set; }
         public int CustomerId { get; set; }
-        public int MenuItemId { get; set; }
+        public int TransactionMenuItemId { get; set; }
         public decimal TotalPrice { get; set; }
         public int LocationId { get; set; }
         public int EmployeeId { get; set; }
 
         public virtual Customer Customer { get; set; }
-        public virtual List<MenuItem> MenuItems { get; set; }
+        public virtual List<TransactionMenuItem> TransactionMenuItems { get; set; }
         public virtual Location Location { get; set; }
         public virtual Employee Employee { get; set; }
     }
