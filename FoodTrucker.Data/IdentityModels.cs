@@ -41,6 +41,7 @@ namespace FoodTrucker.Data
         public DbSet<RecipeIngredient> RecipeIngredients { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<TransactionMenuItem> TransactionMenuItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -54,7 +55,6 @@ namespace FoodTrucker.Data
                 .Add(new IdentityUserRoleConfirmation());
 
         }
-
     }
 
     public class IdentityUserLoginConfirmation : EntityTypeConfiguration<IdentityUserLogin>

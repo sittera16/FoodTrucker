@@ -66,6 +66,7 @@
     <Compile Include="RecipeIngredientService.cs" />
     <Compile Include="RecipeService.cs" />
     <Compile Include="ScheduleService.cs" />
+    <Compile Include="TransactionMenuItemService.cs" />
     <Compile Include="TransactionService.cs" />
   </ItemGroup>
   <ItemGroup>

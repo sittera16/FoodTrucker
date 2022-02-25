@@ -18,7 +18,7 @@ namespace FoodTrucker.Data
         public int EmployeeId { get; set; }
 
         public virtual Customer Customer { get; set; }
-        public virtual MenuItem MenuItem { get; set; }
+        public virtual List<MenuItem> MenuItems { get; set; }
         public virtual Location Location { get; set; }
         public virtual Employee Employee { get; set; }
     }

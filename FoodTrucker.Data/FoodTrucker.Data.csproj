@@ -75,12 +75,17 @@
     <Compile Include="Migrations\202202241501039_RecipeNameAdded.designer.cs">
       <DependentUpon>202202241501039_RecipeNameAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202202251617371_TransactionMenuItemAdded.cs" />
+    <Compile Include="Migrations\202202251617371_TransactionMenuItemAdded.designer.cs">
+      <DependentUpon>202202251617371_TransactionMenuItemAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
     <Compile Include="RecipeIngredient.cs" />
     <Compile Include="Schedule.cs" />
     <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionMenuItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -95,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202241501039_RecipeNameAdded.resx">
       <DependentUpon>202202241501039_RecipeNameAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202251617371_TransactionMenuItemAdded.resx">
+      <DependentUpon>202202251617371_TransactionMenuItemAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

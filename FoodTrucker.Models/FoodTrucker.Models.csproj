@@ -90,6 +90,10 @@
     <Compile Include="Schedule\ScheduleDetail.cs" />
     <Compile Include="Schedule\ScheduleEdit.cs" />
     <Compile Include="Schedule\ScheduleListItem.cs" />
+    <Compile Include="TransactionMenuItem\TransactionMenuItemCreate.cs" />
+    <Compile Include="TransactionMenuItem\TransactionMenuItemDetail.cs" />
+    <Compile Include="TransactionMenuItem\TransactionMenuItemEdit.cs" />
+    <Compile Include="TransactionMenuItem\TransactionMenuItemListItem.cs" />
     <Compile Include="Transaction\TransactionCreate.cs" />
     <Compile Include="Transaction\TransactionDetail.cs" />
     <Compile Include="Transaction\TransactionEdit.cs" />
