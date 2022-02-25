@@ -1,4 +1,5 @@
-﻿using FoodTrucker.Models.Customer;
+﻿using FoodTrucker.Data;
+using FoodTrucker.Models.Customer;
 using FoodTrucker.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -23,6 +24,15 @@ namespace FoodTrucker.WebMVC.Controllers
         // GET: 
         public ActionResult Create()
         {
+            List<RecipeListItem> Recipes = CreateRecipeService().GetRecipes().ToList();
+            var query = from r in Recipes
+                        select new SelectListItem()
+                        {
+                            Value = r.Id.ToString(),
+                            Text = r.Name,
+                        };
+            ViewBag.RecipeId = query.ToList();
+
             return View();
         }
 
@@ -57,6 +67,15 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var service = CreateMenuItemService();
             var detail = service.GetMenuItemById(id);
+            List<RecipeListItem> Recipes = CreateRecipeService().GetRecipes().ToList();
+            var query = from r in Recipes
+                        select new SelectListItem()
+                        {
+                            Value = r.Id.ToString(),
+                            Text = r.Name,
+                        };
+            ViewBag.RecipeId = query.ToList();
+
             var model =
                 new MenuItemEdit
                 {
@@ -116,6 +135,12 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new MenuItemService(userId);
+            return service;
+        }
+        private RecipeService CreateRecipeService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RecipeService(userId);
             return service;
         }
     }

@@ -71,7 +71,7 @@ namespace FoodTrucker.Services
                         Id = entity.Id,
                         TransactionDate = entity.TransactionDate,
                         CustomerId = entity.CustomerId,
-                        MenuItems = entity.TransactionMenuItems.Select(t => t.MenuItem.Name).ToList(),
+                        MenuItems = entity.TransactionMenuItems.Select(t => t.MenuItem.Recipe.Name).ToList(),
                         TotalPrice = entity.TotalPrice,
                         LocationId = entity.LocationId,
                         EmployeeId = entity.EmployeeId,
