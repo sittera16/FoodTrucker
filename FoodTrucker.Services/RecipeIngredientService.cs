@@ -45,8 +45,8 @@ namespace FoodTrucker.Services
                                 new RecipeIngredientListItem
                                 {
                                     Id = c.Id,
-                                    IngredientId = c.IngredientId,
-                                    RecipeId = c.RecipeId,
+                                    IngredientName = c.Ingredient.Name,
+                                    RecipeName = c.Recipe.Name,
                                 }
                                 );
                 return query.ToArray();
@@ -65,8 +65,8 @@ namespace FoodTrucker.Services
                     new RecipeIngredientDetail
                     {
                         Id = entity.Id,
-                        IngredientId = entity.IngredientId,
-                        RecipeId = entity.RecipeId
+                        IngredientName = entity.Ingredient.Name,
+                        RecipeName = entity.Recipe.Name
                     };
             }
         }

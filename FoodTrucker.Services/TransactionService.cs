@@ -22,7 +22,7 @@ namespace FoodTrucker.Services
             var entity =
                 new Transaction()
                 {
-                    TransactionDate = model.TransactionDate,
+                    TransactionDate = DateTime.Now,
                     CustomerId = model.CustomerId,
                     TransactionMenuItemId = model.TransactionMenuItemId,
                     TotalPrice = model.TotalPrice,
@@ -33,7 +33,7 @@ namespace FoodTrucker.Services
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Transactions.Add(entity);
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() > 0;
             }
         }
 

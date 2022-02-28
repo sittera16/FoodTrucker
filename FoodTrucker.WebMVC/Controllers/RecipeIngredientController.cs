@@ -78,11 +78,11 @@ namespace FoodTrucker.WebMVC.Controllers
             var detail = service.GetRecipeIngredientById(id);
 
             List<IngredientListItem> Ingredients = CreateIngredientService().GetIngredients().ToList();
-            var query = from r in Ingredients
+            var query = from i in Ingredients
                         select new SelectListItem()
                         {
-                            Value = r.Id.ToString(),
-                            Text = r.Name,
+                            Value = i.Id.ToString(),
+                            Text = i.Name,
                         };
             ViewBag.IngredientId = query.ToList();
 

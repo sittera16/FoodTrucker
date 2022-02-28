@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -24,6 +25,24 @@ namespace FoodTrucker.WebMVC.Controllers
         // GET: 
         public ActionResult Create()
         {
+            List<MenuItemListItem> MenuItems = CreateMenuItemService().GetMenuItems().ToList();
+            var query = from m in MenuItems
+                        select new SelectListItem()
+                        {
+                            Value = m.Id.ToString(),
+                            Text = m.Name,
+                        };
+            ViewBag.MenuItemId = query.ToList();
+
+            List<TransactionListItem> Transactions = CreateTransactionService().GetTransactions().ToList();
+            var query2 = from r in Transactions
+                         select new SelectListItem()
+                         {
+                             Value = r.Id.ToString(),
+                             Text = r.TransactionDate.ToString(),
+                         };
+            ViewBag.TransactionId = query2.ToList();
+
             return View();
         }
 
@@ -58,6 +77,25 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var service = CreateTransactionMenuItemService();
             var detail = service.GetTransactionMenuItemById(id);
+
+            List<MenuItemListItem> MenuItems = CreateMenuItemService().GetMenuItems().ToList();
+            var query = from i in MenuItems
+                        select new SelectListItem()
+                        {
+                            Value = i.Id.ToString(),
+                            Text = i.Name,
+                        };
+            ViewBag.MenuItemId = query.ToList();
+
+            List<TransactionListItem> Transactions = CreateTransactionService().GetTransactions().ToList();
+            var query2 = from r in Transactions
+                         select new SelectListItem()
+                         {
+                             Value = r.Id.ToString(),
+                             Text = r.TransactionDate.ToString(),
+                         };
+            ViewBag.TransactionId = query2.ToList();
+
             var model =
                 new TransactionMenuItemEdit
                 {
@@ -119,5 +157,18 @@ namespace FoodTrucker.WebMVC.Controllers
             var service = new TransactionMenuItemService(userId);
             return service;
         }
+        private MenuItemService CreateMenuItemService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new MenuItemService(userId);
+            return service;
+        }
+        private TransactionService CreateTransactionService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new TransactionService(userId);
+            return service;
+        }
+
     }
 }

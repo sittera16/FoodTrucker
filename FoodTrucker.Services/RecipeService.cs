@@ -22,13 +22,14 @@ namespace FoodTrucker.Services
             var entity =
                 new Recipe()
                 {
+                    Name = model.Name,
                     Instructions = model.Instructions,
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Recipes.Add(entity);
-                return ctx.SaveChanges() == 1;
+                return ctx.SaveChanges() > 0;
             }
         }
 

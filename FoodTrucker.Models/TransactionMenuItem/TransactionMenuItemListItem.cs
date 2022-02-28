@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodTrucker.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,7 @@ namespace FoodTrucker.Models.Customer
         public int Id { get; set; }
         public int MenuItemId { get; set; }
         public int TransactionId { get; set; }
+        public string MenuItemName { get; set; }
+        public string TransactionDate { get; set; }
     }
 }

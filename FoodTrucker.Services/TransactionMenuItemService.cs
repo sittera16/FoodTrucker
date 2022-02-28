@@ -2,6 +2,7 @@
 using FoodTrucker.Models.Customer;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,11 +46,11 @@ namespace FoodTrucker.Services
                                 new TransactionMenuItemListItem
                                 {
                                     Id = c.Id,
-                                    MenuItemId = c.MenuItemId,
-                                    TransactionId= c.TransactionId
+                                    MenuItemName = c.MenuItem.Name,
+                                    TransactionDate= c.Transaction.TransactionDate.ToString(),
                                 }
                                 );
-                return query.ToArray();
+                return query.ToList();
             }
         }
 
@@ -65,8 +66,8 @@ namespace FoodTrucker.Services
                     new TransactionMenuItemDetail
                     {
                         Id = entity.Id,
-                        MenuItemId = entity.MenuItemId,
-                        TransactionId = entity.TransactionId
+                        MenuItemName = entity.MenuItem.Name,
+                        TransactionDate = entity.Transaction.TransactionDate.ToString(),
                     };
             }
         }

@@ -13,7 +13,6 @@ namespace FoodTrucker.Models.Customer
         public string Name { get; set; }
         [Required]
         public string Instructions { get; set; }
-        [Required]
         public int RecipeIngredientId { get; set; }
     }
 }

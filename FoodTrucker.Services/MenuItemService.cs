@@ -23,6 +23,7 @@ namespace FoodTrucker.Services
                 new MenuItem()
                 {
                     RecipeId = model.RecipeId,
+                    Name = model.Name,
                     Price = model.Price,
                     Description = model.Description,
                 };
@@ -84,6 +85,7 @@ namespace FoodTrucker.Services
                         .Single(e => e.Id == model.Id);
 
                 entity.RecipeId = model.RecipeId;
+                entity.Name = model.Name;
                 entity.Price = model.Price;
                 entity.Description = model.Description;
 

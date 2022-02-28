@@ -11,5 +11,7 @@ namespace FoodTrucker.Models.Customer
         public int Id { get; set; }
         public int MenuItemId { get; set; }
         public int TransactionId { get; set; }
+        public string MenuItemName { get; set; }
+        public string TransactionDate { get; set; }
     }
 }
