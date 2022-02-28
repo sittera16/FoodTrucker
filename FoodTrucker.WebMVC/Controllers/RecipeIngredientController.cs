@@ -24,6 +24,24 @@ namespace FoodTrucker.WebMVC.Controllers
         // GET: 
         public ActionResult Create()
         {
+            List<IngredientListItem> Ingredients = CreateIngredientService().GetIngredients().ToList();
+            var query = from i in Ingredients
+                        select new SelectListItem()
+                        {
+                            Value = i.Id.ToString(),
+                            Text = i.Name,
+                        };
+            ViewBag.IngredientId = query.ToList();
+
+            List<RecipeListItem> Recipes = CreateRecipeService().GetRecipes().ToList();
+            var query2 = from r in Recipes
+                         select new SelectListItem()
+                         {
+                             Value = r.Id.ToString(),
+                             Text = r.Name,
+                         };
+            ViewBag.RecipeId = query2.ToList();
+
             return View();
         }
 
@@ -58,10 +76,28 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var service = CreateRecipeIngredientService();
             var detail = service.GetRecipeIngredientById(id);
+
+            List<IngredientListItem> Ingredients = CreateIngredientService().GetIngredients().ToList();
+            var query = from r in Ingredients
+                        select new SelectListItem()
+                        {
+                            Value = r.Id.ToString(),
+                            Text = r.Name,
+                        };
+            ViewBag.IngredientId = query.ToList();
+
+            List<RecipeListItem> Recipes = CreateRecipeService().GetRecipes().ToList();
+            var query2 = from r in Recipes
+                        select new SelectListItem()
+                        {
+                            Value = r.Id.ToString(),
+                            Text = r.Name,
+                        };
+            ViewBag.RecipeId = query2.ToList();
+
             var model =
                 new RecipeIngredientEdit
                 {
-                    Id = detail.Id,
                     IngredientId = detail.IngredientId,
                     RecipeId = detail.RecipeId,
                 };
@@ -117,6 +153,20 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new RecipeIngredientService(userId);
+            return service;
+        }
+
+        private IngredientService CreateIngredientService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new IngredientService(userId);
+            return service;
+        }
+
+        private RecipeService CreateRecipeService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new RecipeService(userId);
             return service;
         }
     }

@@ -67,6 +67,7 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var service = CreateMenuItemService();
             var detail = service.GetMenuItemById(id);
+
             List<RecipeListItem> Recipes = CreateRecipeService().GetRecipes().ToList();
             var query = from r in Recipes
                         select new SelectListItem()
