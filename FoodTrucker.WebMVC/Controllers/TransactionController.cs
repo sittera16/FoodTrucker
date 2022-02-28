@@ -24,6 +24,33 @@ namespace FoodTrucker.WebMVC.Controllers
         // GET: 
         public ActionResult Create()
         {
+            List<CustomerListItem> Customers = CreateCustomerService().GetCustomers().ToList();
+            var query = from i in Customers
+                        select new SelectListItem()
+                        {
+                            Value = i.Id.ToString(),
+                            Text = i.LastName + ", " + i.FirstName,
+                        };
+            ViewBag.CustomerId = query.ToList();
+
+            List<LocationListItem> Locations = CreateLocationService().GetLocations().ToList();
+            var query2 = from r in Locations
+                         select new SelectListItem()
+                         {
+                             Value = r.Id.ToString(),
+                             Text = r.Address,
+                         };
+            ViewBag.LocationId = query2.ToList();
+
+            List<EmployeeListItem> Employees = CreateEmployeeService().GetEmployees().ToList();
+            var query3 = from i in Employees
+                         select new SelectListItem()
+                         {
+                             Value = i.Id.ToString(),
+                             Text = i.LastName + ", " + i.FirstName,
+                         };
+            ViewBag.EmployeeId = query3.ToList();
+
             return View();
         }
 
@@ -58,6 +85,34 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var service = CreateTransactionService();
             var detail = service.GetTransactionById(id);
+
+            List<CustomerListItem> Customers = CreateCustomerService().GetCustomers().ToList();
+            var query = from r in Customers
+                        select new SelectListItem()
+                        {
+                            Value = r.Id.ToString(),
+                            Text = r.LastName + ", " + r.FirstName,
+                        };
+            ViewBag.CustomerId = query.ToList();
+
+            List<LocationListItem> Locations = CreateLocationService().GetLocations().ToList();
+            var query2 = from r in Locations
+                         select new SelectListItem()
+                         {
+                             Value = r.Id.ToString(),
+                             Text = r.Address,
+                         };
+            ViewBag.LocationId = query2.ToList();
+
+            List<EmployeeListItem> Employees = CreateEmployeeService().GetEmployees().ToList();
+            var query3 = from r in Employees
+                         select new SelectListItem()
+                         {
+                             Value = r.Id.ToString(),
+                             Text = r.LastName + ", " + r.FirstName,
+                         };
+            ViewBag.EmployeeId = query3.ToList();
+
             var model =
                 new TransactionEdit
                 {
@@ -120,6 +175,25 @@ namespace FoodTrucker.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new TransactionService(userId);
+            return service;
+        }
+        private CustomerService CreateCustomerService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CustomerService(userId);
+            return service;
+        }
+        private LocationService CreateLocationService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new LocationService(userId);
+            return service;
+
+        }
+        private EmployeeService CreateEmployeeService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new EmployeeService(userId);
             return service;
         }
     }
