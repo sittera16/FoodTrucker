@@ -17,6 +17,7 @@ namespace FoodTrucker.Models.Customer
         [Required]
         public string Neighborhood { get; set; }
         [Required]
+        [Display(Name = "Location Type")]
         public LocationType LocationType { get; set; }
     }
 }

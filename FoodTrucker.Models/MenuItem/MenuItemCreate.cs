@@ -11,8 +11,10 @@ namespace FoodTrucker.Models.Customer
     public class MenuItemCreate
     {
         [Required]
+        [Display(Name ="Recipe Name")]
         public int RecipeId { get; set; }
         [Required]
+        [Display(Name = "Menu Item Name")]
         public string Name { get; set; }
         [Required]
         public decimal Price { get; set; }

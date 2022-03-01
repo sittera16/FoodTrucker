@@ -14,7 +14,9 @@ namespace FoodTrucker.Models.Customer
         [MaxLength(150)]
         public string Name { get; set; }
         [Range(0, 150)]
+        [Display(Name = "Quantity in Stock")]
         public int QuantityInStock { get; set; }
+        [Display(Name = "Ingredient Type")]
         public IngredientType IngredientType { get; set; }
     }
 }

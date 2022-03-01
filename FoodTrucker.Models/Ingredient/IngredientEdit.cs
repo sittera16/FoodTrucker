@@ -16,8 +16,10 @@ namespace FoodTrucker.Models.Customer
         public string Name { get; set; }
         [Required]
         [Range(0, 150)]
+        [Display(Name = "Quantity in Stock")]
         public int QuantityInStock { get; set; }
         [Required]
+        [Display(Name = "Ingredient Type")]
         public IngredientType IngredientType { get; set; }
     }
 }

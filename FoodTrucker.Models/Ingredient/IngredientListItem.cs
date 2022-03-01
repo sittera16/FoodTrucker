@@ -1,6 +1,7 @@
 ﻿using FoodTrucker.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace FoodTrucker.Models.Customer
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        [Display(Name = "Quantity in Stock")]
         public int QuantityInStock { get; set; }
     }
 }
