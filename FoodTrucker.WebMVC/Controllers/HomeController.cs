@@ -28,7 +28,7 @@ namespace FoodTrucker.WebMVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Feel free to reach out to me with and questions, concerns, or comments.";
 
             return View();
         }

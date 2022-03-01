@@ -12,12 +12,16 @@ namespace FoodTrucker.Models.Customer
         public int Id { get; set; }
         [Required]
         [MaxLength(25)]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
         [Required]
         [MaxLength(25)]
+        [Display(Name ="Last Name")]
         public string LastName { get; set; }
         [MaxLength(100)]
+        [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
+        [Display(Name = "Birth Date")]
         public DateTimeOffset BirthDate { get; set; }
     }
 }
