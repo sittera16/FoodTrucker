@@ -1,5 +1,4 @@
 # FoodTrucker
-Application can be found here: https://foodtrucker.azurewebsites.net
 
 Thank you for taking the time to check out this project. This project was designed to be a hub for a food truck operator/owner. They should be able to keep track of employees, customers, menu items, ingredients, and so much more. While the program is fairly basic right now, I can see a clear path as to how to make it better in time.
 
